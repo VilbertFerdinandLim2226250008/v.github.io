@@ -3,7 +3,7 @@ const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
 // Ganti dengan connection string MongoDB Anda
-const uri = 'mongodb+srv://admin:TokoSinarUtamaJAYAJAYAJAYA@tokosinarutama.yypt0.mongodb.net/?retryWrites=true&w=majority&appName=TokoSinarUtama';
+const uri = 'mongodb+srv://admin:TokoSinarUtamaJAYAJAYAJAYA@tokosinarutama.yypt0.mongodb.net/?retryWrites=true&w=majority&appName=TokoSinarUtama"';
 
 const app = express();
 const client = new MongoClient(uri);
@@ -41,8 +41,7 @@ app.post('/api/users', async (req, res) => {
     }
 });
 
-// Tentukan port secara dinamis untuk lingkungan produksi (Vercel)
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server berjalan di http://localhost:${port}`);
+// Jalankan server di port 3000
+app.listen(3000, () => {
+    console.log('Server berjalan di http://localhost:3000');
 });
